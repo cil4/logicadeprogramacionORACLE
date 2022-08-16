@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partidos</title>
+</head>
+<body>
+    <script>
+        function saltarLinea(){
+            document.write("<br><br>");
+        }
+
+        function imprimir(frase){
+            document.write(frase);
+            saltarLinea();
+        }
+
+        var victorias = parseInt(prompt("Informe la cantidad de partidos ganados: "));
+        var empates = parseInt(prompt("Informe la cantidad de partidos empatados: "));
+
+        var puntosTotal = victorias * 3 + empates;
+
+        imprimir("El puntaje total del equipo es: " + puntosTotal);
+
+        if (puntosTotal > 28){
+            imprimir("El equipo está mejor que el año pasado.");
+        }
+
+        if (puntosTotal < 28){
+            imprimir("El equipo está peor que el año pasado.");
+        }
+        if (puntosTotal == 28){
+            imprimir("El equipo está igual  que el año pasado.");
+        }
+    </script>
+</body>
+</html>

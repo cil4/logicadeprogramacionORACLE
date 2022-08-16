@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+<script>
+
+function saltarLinea() {  
+
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+
+}  
+
+function imprimir(frase) {
+
+    document.write(frase);
+    saltarLinea();
+
+}
+
+//recomiendo declarar tus variables fuera del while
+//revisa los conceptos de variables locales y globales
+var inicioDeSesionRegistrado = "alura";
+var contrasenhaRegistrada = "alura321";
+//en este caso no es necesario usar el generar un número aleatorio por que el numero de intentos sera 3
+//var numeromaximo = Math.round(Math.random()*3);
+var intentos = 3;
+var contador = 1;
+
+
+while (contador <= intentos) {    
+    var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+    var contrasenhaIngresada = prompt("Ingrese su contraseña");
+    var consolidado = inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada;
+    if (consolidado) {
+        alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+        imprimir ("Bienvenido a Alura")
+        break;
+
+    } else {
+        alert("inicio de sesión inválido. Favor intente de nuevo");
+        //los alert y los prompt se cargaran antes de un document.write o cualquier otra instrucción
+        //imprimir ("Se procedera a BLOQUEAR EL SISTEMA al Tercer Intento");
+        alert ("Se BLOQUEARÁ EL SISTEMA al Tercer Intento, No.de intento " + contador);
+        contador++;
+    }
+}
+
+</script>

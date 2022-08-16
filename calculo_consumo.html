@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos de consumo</title>
+</head>
+<body>
+    <h3>¿Alcohol o gasolina?</h3>
+    <script>
+
+        function saltarLinea() {
+            document.write("<br><br>");
+        }
+
+        function imprimir(frase){
+            document.write(frase);
+            saltarLinea();
+        }
+
+        var respuesta ="Por kilómetro recorrido se consumen: ";
+        var tanque = 40;
+        var distanciaGas= 480;
+
+       imprimir( respuesta + (distanciaGas/tanque)+ " litros de gasolina.");
+
+
+        var distanciaAlcohol= 300;
+        imprimir(respuesta + (distanciaAlcohol/tanque)+ " litros de alcohol.");
+
+
+        imprimir("Viendo si funciona esta consigna.");
+    </script>
+</body>
+</html>
